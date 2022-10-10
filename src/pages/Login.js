@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
 
 class Login extends React.Component {
@@ -48,7 +49,7 @@ class Login extends React.Component {
             Entrar
           </button>
           {
-            loading ? <p>Carregando...</p> : ''
+            loading ? <Loading /> : ''
           }
           {
             logged ? <Redirect to="/search" /> : ''
