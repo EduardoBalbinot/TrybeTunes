@@ -32,7 +32,7 @@ class Profile extends React.Component {
                 <p>{ user.name }</p>
                 <p>{ user.email }</p>
                 <p>{ user.description }</p>
-                <Link to="profile/edit">Editar</Link>
+                <Link to="profile/edit">Editar perfil</Link>
               </div>
             )
         }
