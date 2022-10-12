@@ -22,7 +22,6 @@ class Search extends React.Component {
       loading: false,
       results,
     });
-    console.log(results);
     if (results.length === 0) this.setState({ noResults: true });
     else this.setState({ noResults: false });
   };

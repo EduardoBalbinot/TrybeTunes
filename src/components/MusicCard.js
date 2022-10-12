@@ -13,10 +13,7 @@ class MusicCard extends React.Component {
     const { trackObj, favoriteSongs } = this.props;
     const { trackId } = trackObj;
     const favoriteSongsObj = JSON.parse(favoriteSongs);
-    const favorite = favoriteSongsObj.some((ft) => {
-      console.log(ft.trackId, trackId);
-      return ft.trackId === trackId;
-    });
+    const favorite = favoriteSongsObj.some((ft) => (ft.trackId === trackId));
     this.setState({
       favorite,
     });

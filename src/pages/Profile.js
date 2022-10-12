@@ -13,7 +13,6 @@ class Profile extends React.Component {
   async componentDidMount() {
     this.setState({ loading: true });
     const user = await getUser();
-    console.log(user);
     this.setState({ user, loading: false });
   }
 

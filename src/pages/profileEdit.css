@@ -1,0 +1,4 @@
+.editProfileForm {
+  display: flex;
+  flex-direction: column;
+}
