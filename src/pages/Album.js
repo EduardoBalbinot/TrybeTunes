@@ -35,8 +35,7 @@ class Album extends React.Component {
               ? (
                 <MusicCard
                   key={ track.trackId }
-                  trackName={ track.trackName }
-                  previewUrl={ track.previewUrl }
+                  trackObj={ track }
                 />
               )
               : ''
