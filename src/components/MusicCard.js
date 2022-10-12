@@ -76,7 +76,6 @@ MusicCard.propTypes = {
   trackObj: shape({
     trackName: PropTypes.string,
     previewUrl: PropTypes.string,
-    trackId: PropTypes.number,
   }).isRequired,
   favoriteSongs: PropTypes.string.isRequired,
   afterRemove: PropTypes.func,
