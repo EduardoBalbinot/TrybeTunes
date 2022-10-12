@@ -17,19 +17,24 @@ class MusicCard extends React.Component {
       console.log(ft.trackId, trackId);
       return ft.trackId === trackId;
     });
-    this.setState({ favorite });
+    this.setState({
+      favorite,
+    });
   }
 
   favoriteChange = async (e) => {
     const { checked } = e.target;
-    const { trackObj } = this.props;
+    const { trackObj, afterRemove, setParentLoading } = this.props;
     this.setState({ loading: true });
     if (checked) {
       await addSong(trackObj);
       this.setState({ loading: false, favorite: true });
     } else {
+      setParentLoading(true);
       await removeSong(trackObj);
       this.setState({ loading: false, favorite: false });
+      await afterRemove();
+      setParentLoading(false);
     }
   };
 
@@ -65,6 +70,11 @@ class MusicCard extends React.Component {
   }
 }
 
+MusicCard.defaultProps = {
+  afterRemove: () => {},
+  setParentLoading: () => {},
+};
+
 MusicCard.propTypes = {
   trackObj: shape({
     trackName: PropTypes.string,
@@ -72,6 +82,8 @@ MusicCard.propTypes = {
     trackId: PropTypes.number,
   }).isRequired,
   favoriteSongs: PropTypes.string.isRequired,
+  afterRemove: PropTypes.func,
+  setParentLoading: PropTypes.func,
 };
 
 export default MusicCard;
