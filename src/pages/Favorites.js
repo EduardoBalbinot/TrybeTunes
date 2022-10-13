@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import './favorites.css';
 
 class Favorites extends React.Component {
   state = {
@@ -35,7 +36,7 @@ class Favorites extends React.Component {
     return (
       <div data-testid="page-favorites">
         <Header />
-        <h1>Favorites</h1>
+        <h1 className="favoritesTitle">Favoritos</h1>
         {
           !loading
             ? (

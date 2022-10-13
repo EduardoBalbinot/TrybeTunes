@@ -1,7 +1,9 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import logo from './logo.png';
 import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
+import './login.css';
 
 class Login extends React.Component {
   state = {
@@ -29,17 +31,17 @@ class Login extends React.Component {
     const minNameLenght = 3;
     return (
       <div data-testid="page-login">
-        <form>
-          <label htmlFor="nome">
-            Nome
-            <input
-              id="nome"
-              name="nome"
-              type="text"
-              data-testid="login-name-input"
-              onChange={ this.handleChange }
-            />
-          </label>
+        <form className="loginFormTunes" autoComplete="off">
+          <img src={ logo } alt="logo" className="logo" />
+          <h1 className="logoTitle">Trybe Tunes.</h1>
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            className="inputLogin"
+            data-testid="login-name-input"
+            onChange={ this.handleChange }
+          />
           <button
             type="button"
             data-testid="login-submit-button"

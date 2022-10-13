@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import './search.css';
 
 class Search extends React.Component {
   state = {
@@ -37,15 +38,14 @@ class Search extends React.Component {
     const { artistSearch, loading, results, noResults } = this.state;
     const minSearchLenght = 2;
     return (
-      <div data-testid="page-search">
+      <div data-testid="page-search" className="searchPage">
         <Header />
-        <h1>Search</h1>
-        <form>
+        <form className="searchForm" autoComplete="off">
           {
             loading
               ? <Loading />
               : (
-                <div>
+                <div className="searchBar">
                   <input
                     data-testid="search-artist-input"
                     placeholder="Nome do Artista"
@@ -67,24 +67,27 @@ class Search extends React.Component {
         {
           results.length > 0
             ? (
-              <div>
-                <p>{`Resultado de álbuns de: ${artistSearch}`}</p>
-                {
-                  results.map((r) => (
-                    <div key={ r.collectionId }>
-                      <img src={ r.artworkUrl100 } alt={ r.collectionName } />
-                      <p>{ r.collectionName }</p>
-                      <p>{ r.artistName }</p>
-                      <Link
-                        to={ `album/${r.collectionId}` }
-                        data-testid={ `link-to-album-${r.collectionId}` }
-                      >
-                        Detalhes
-                      </Link>
-                    </div>
-                  ))
-                }
-              </div>
+              <>
+                <p className="resTitle">{`Resultado de álbuns de: ${artistSearch}`}</p>
+                <div className="results">
+                  {
+                    results.map((r) => (
+                      <div key={ r.collectionId } className="resultCard">
+                        <img src={ r.artworkUrl100 } alt={ r.collectionName } />
+                        <p>{ r.collectionName }</p>
+                        <p>{ r.artistName }</p>
+                        <Link
+                          to={ `album/${r.collectionId}` }
+                          data-testid={ `link-to-album-${r.collectionId}` }
+                          className="resultLink"
+                        >
+                          Detalhes
+                        </Link>
+                      </div>
+                    ))
+                  }
+                </div>
+              </>
             )
             : ''
         }

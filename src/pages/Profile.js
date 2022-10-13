@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser } from '../services/userAPI';
+import './profile.css';
 
 class Profile extends React.Component {
   state = {
@@ -21,17 +22,23 @@ class Profile extends React.Component {
     return (
       <div data-testid="page-profile">
         <Header />
-        <h1>Profile</h1>
+        <h1 className="profileTitle">Perfil</h1>
         {
           loading
             ? (<Loading />)
             : (
-              <div>
-                <img src={ user.image } alt={ user.name } data-testid="profile-image" />
+              <div className="profileContainer">
+                <img
+                  src={ user.image
+                    ? user.image
+                    : 'https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg' }
+                  alt={ user.name }
+                  data-testid="profile-image"
+                />
                 <p>{ user.name }</p>
                 <p>{ user.email }</p>
                 <p>{ user.description }</p>
-                <Link to="profile/edit">Editar perfil</Link>
+                <Link to="profile/edit" className="editProfileLink">Editar perfil</Link>
               </div>
             )
         }

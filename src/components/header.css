@@ -1,0 +1,35 @@
+.headerTunes {
+  background-image: linear-gradient(to left, rgb(247, 38, 132), rgb(72, 12, 168));
+  color: white;
+  font-weight: 400;
+}
+
+.headerTunes img {
+  border-radius: 50%;
+  height: 100px;
+}
+
+.headerContent h1 {
+  text-align: center;
+}
+
+.headerTunes div {
+  align-items: center;
+  display: flex;
+}
+
+
+.headerContent {
+  justify-content: center;
+  padding: 5px;
+}
+
+.pageLink {
+  background-image: linear-gradient(to top, rgb(67, 97, 238), rgb(72, 149, 239));
+  color: white;
+  flex-grow: 1;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+}

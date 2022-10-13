@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import './album.css';
 
 class Album extends React.Component {
   state = {
@@ -26,27 +27,41 @@ class Album extends React.Component {
     });
   }
 
+  getHigherResCover = (coverLink) => {
+    if (coverLink) {
+      const lastCharacters = 11;
+      let newLink = coverLink.substring(0, coverLink.length - lastCharacters);
+      newLink += '512x512bb.jpg';
+      return newLink;
+    }
+  };
+
   render() {
     const { album, favoriteSongs } = this.state;
     const { artistName, collectionName } = album[0];
+    let highResCover = '';
+    if (album[0].artistName) highResCover = this.getHigherResCover(album[0].artworkUrl60);
     return (
-      <div data-testid="page-album">
+      <div data-testid="page-album" className="albumPage">
         <Header />
         <h1 data-testid="artist-name">{ artistName }</h1>
         <h2 data-testid="album-name">{ collectionName }</h2>
-        {
-          album.map((track, i) => (
-            i > 0
-              ? (
-                <MusicCard
-                  key={ track.trackId }
-                  trackObj={ track }
-                  favoriteSongs={ favoriteSongs }
-                />
-              )
-              : ''
-          ))
-        }
+        <img src={ highResCover } alt={ album[0].collectionName } className="albumImg" />
+        <div>
+          {
+            album.map((track, i) => (
+              i > 0
+                ? (
+                  <MusicCard
+                    key={ track.trackId }
+                    trackObj={ track }
+                    favoriteSongs={ favoriteSongs }
+                  />
+                )
+                : ''
+            ))
+          }
+        </div>
       </div>
     );
   }

@@ -1,4 +1,55 @@
 .editProfileForm {
+  align-items: center;
+  background-image: linear-gradient(to left, rgb(247, 38, 132), rgb(72, 12, 168));
+  border-radius: 14px;
+  color: white;
   display: flex;
   flex-direction: column;
+  margin: 0 auto auto;
+  max-width: 280px;
+  padding: 20px 0;
+}
+
+.editProfileTitle {
+  text-align: center;
+}
+
+.editProfileForm label {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.editProfileForm input, textarea {
+  background: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 10px;
+  max-width: 200px;
+}
+
+.editProfileForm input {
+  height: 30px;
+}
+
+.editProfileForm input:focus, textarea:focus {
+  outline: none;
+}
+
+.editProfileForm textarea {
+  height: 60px;
+}
+
+.editProfileForm button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: #b5179e;
+  cursor: pointer;
+  font-weight: 900;
+  height: 30px;
+  margin: 10px auto auto;
+  width: 80px;
 }

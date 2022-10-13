@@ -1,0 +1,44 @@
+* {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.logo {
+  margin: 20px auto 0;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.logoTitle {
+  color: white;
+  text-align: center;
+}
+
+.loginFormTunes {
+  background-image: linear-gradient(rgb(247, 38, 132), rgb(72, 12, 168));
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.loginFormTunes .inputLogin {
+  border-radius: 15px;
+  line-height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  max-width: 200px;
+}
+
+.loginFormTunes button {
+  background-image: linear-gradient(rgb(67, 97, 238), rgb(72, 149, 239));
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 900;
+  height: 30px;
+  margin: 10px auto auto;
+  width: 80px;
+}

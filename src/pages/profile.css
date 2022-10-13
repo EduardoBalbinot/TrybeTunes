@@ -1,0 +1,25 @@
+.profileContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto auto;
+  max-width: 500px;
+}
+
+.profileTitle {
+  text-align: center;
+}
+
+.profileContainer img {
+  border-radius: 50%;
+  max-width: 300px;
+}
+
+.editProfileLink {
+  background-image: linear-gradient(to left, rgb(247, 38, 132), rgb(72, 12, 168));
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
