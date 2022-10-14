@@ -1,6 +1,7 @@
 {
   "name": "trybetunes",
   "version": "1.0.1",
+  "homepage": "./",
   "private": true,
   "engines": {
     "node": "16"
