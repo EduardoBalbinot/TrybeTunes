@@ -54,7 +54,6 @@ class Search extends React.Component {
               : (
                 <div className="searchBar">
                   <input
-                    autoFocus
                     data-testid="search-artist-input"
                     placeholder="Nome do Artista"
                     name="artistSearch"

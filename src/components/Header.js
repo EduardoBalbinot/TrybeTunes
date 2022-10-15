@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
-import PropTypes from 'prop-types';
 import Loading from './Loading';
 import './header.css';
 import Logo from './Logo';
