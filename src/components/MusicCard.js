@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes, { shape } from 'prop-types';
 import { addSong, removeSong } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
+import './musicCard.css';
 
 class MusicCard extends React.Component {
   state = {
@@ -40,7 +41,7 @@ class MusicCard extends React.Component {
     const { trackName, previewUrl, trackId } = trackObj;
     const { loading, favorite } = this.state;
     return (
-      <div>
+      <div className="musicCard">
         <p>{ trackName }</p>
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />

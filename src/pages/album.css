@@ -1,9 +1,25 @@
+.albumPage {
+  background-image: linear-gradient(to right, white, white, rgba(255, 255, 255, 0.1));
+  min-height: 100vh;
+  z-index: 1;
+}
+
 .albumImg {
-  height: 100vh;
   position: fixed;
   right: 0;
   top: 0;
+  width: 60%;
   z-index: -1;
+}
+
+.albumInfo {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px 2px;
+  margin: 10px 0 50px 10px;
+  padding: 0 30px;
+  width: 300px;
 }
 
 @media only screen and ( max-width : 1020px ) {
@@ -11,12 +27,13 @@
   .albumImg {
     height: 100vh;
     position: fixed;
-    right: -300px;
+    right: -200px;
+    width: 100vh;
     z-index: -1;
   }
 
   .albumPage {
-    background-image: linear-gradient(to right, white, white, rgba(255, 255, 255, 0.5));
+    background-image: linear-gradient(to right, white, white, rgba(255, 255, 255, 0.1));
     z-index: 1;
   }
 }

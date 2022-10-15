@@ -31,7 +31,7 @@ class Album extends React.Component {
     if (coverLink) {
       const lastCharacters = 11;
       let newLink = coverLink.substring(0, coverLink.length - lastCharacters);
-      newLink += '512x512bb.jpg';
+      newLink += '1024x1024bb.jpg';
       return newLink;
     }
   };
@@ -44,10 +44,12 @@ class Album extends React.Component {
     return (
       <div data-testid="page-album" className="albumPage">
         <Header />
-        <h1 data-testid="artist-name">{ artistName }</h1>
-        <h2 data-testid="album-name">{ collectionName }</h2>
+        <div className="albumInfo">
+          <h1 data-testid="artist-name">{ artistName }</h1>
+          <h2 data-testid="album-name">{ collectionName }</h2>
+        </div>
         <img src={ highResCover } alt={ album[0].collectionName } className="albumImg" />
-        <div>
+        <div className="tracksContainer">
           {
             album.map((track, i) => (
               i > 0
