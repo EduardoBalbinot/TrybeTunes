@@ -98,7 +98,7 @@ class Search extends React.Component {
         }
         {
           noResults
-            ? <p>Nenhum álbum foi encontrado</p>
+            ? <p className="noResults">Nenhum álbum foi encontrado</p>
             : ''
         }
       </div>

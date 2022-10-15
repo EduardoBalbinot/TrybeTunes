@@ -1,0 +1,8 @@
+.loadingComponent {
+  background-color: white;
+  border-radius: 2px;
+  color: black;
+  margin: 0 auto auto;
+  text-align: center;
+  width: 120px;
+}
