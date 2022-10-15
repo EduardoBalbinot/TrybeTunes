@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
+import PropTypes from 'prop-types';
 import Loading from './Loading';
 import './header.css';
 import Logo from './Logo';
@@ -23,9 +24,10 @@ class Header extends React.Component {
 
   render() {
     const { user, loading } = this.state;
+    const { clName } = this.props;
     const { name } = user;
     return (
-      <header data-testid="header-component" className="headerTunes">
+      <header data-testid="header-component" className={ clName }>
         <div className="headerContent">
           <div className="userInfo">
             <img
@@ -66,5 +68,13 @@ class Header extends React.Component {
     );
   }
 }
+
+Header.defaultProps = {
+  clName: 'headerTunes',
+};
+
+Header.propTypes = {
+  clName: PropTypes.string,
+};
 
 export default Header;

@@ -1,6 +1,7 @@
 .albumPage {
   background-image: linear-gradient(to right, white, white, rgba(255, 255, 255, 0.1));
-  min-height: 100vh;
+  padding-top: 150px;
+  min-height: 120vh;
   z-index: 1;
 }
 
@@ -19,8 +20,8 @@
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px 2px;
   margin: 10px 0 50px 10px;
+  max-width: 500px;
   padding: 0 30px;
-  width: 300px;
 }
 
 @media only screen and ( max-width : 1020px ) {

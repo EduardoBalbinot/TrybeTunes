@@ -39,6 +39,7 @@ class Login extends React.Component {
         <form className="loginFormTunes" autoComplete="off">
           <Logo clName="bigLogo" />
           <input
+            autoFocus
             id="nome"
             name="nome"
             type="text"

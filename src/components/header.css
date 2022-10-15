@@ -1,10 +1,21 @@
 .headerTunes {
-  background-image: linear-gradient(to left, rgb(247, 38, 132), rgb(72, 12, 168));
+  background-image: linear-gradient(to left, rgba(247, 38, 132), rgba(72, 12, 168));
   color: white;
   font-weight: 400;
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.headerTunesTransparent {
+  backdrop-filter: blur(5px);
+  background-image: linear-gradient(to left, rgba(247, 38, 132, 0.5), rgba(72, 12, 168, 0.5));
+  color: white;
+  font-weight: 400;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 10;
 }
 

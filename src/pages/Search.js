@@ -46,7 +46,7 @@ class Search extends React.Component {
     const minSearchLenght = 2;
     return (
       <div data-testid="page-search" className="searchPage">
-        <Header />
+        <Header clName="headerTunesTransparent" />
         <form className="searchForm" autoComplete="off" onSubmit={ this.preventSubmit }>
           {
             loading
@@ -54,6 +54,7 @@ class Search extends React.Component {
               : (
                 <div className="searchBar">
                   <input
+                    autoFocus
                     data-testid="search-artist-input"
                     placeholder="Nome do Artista"
                     name="artistSearch"
