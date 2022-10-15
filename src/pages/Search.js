@@ -8,6 +8,7 @@ import './search.css';
 class Search extends React.Component {
   state = {
     artistSearch: '',
+    lastArtistSearch: '',
     loading: false,
     results: [],
     noResults: false,
@@ -21,6 +22,7 @@ class Search extends React.Component {
     const results = await searchAlbumsAPI(artistSearch);
     this.setState({
       loading: false,
+      lastArtistSearch: artistSearch,
       results,
     });
     if (results.length === 0) this.setState({ noResults: true });
@@ -40,7 +42,7 @@ class Search extends React.Component {
   };
 
   render() {
-    const { artistSearch, loading, results, noResults } = this.state;
+    const { artistSearch, loading, results, noResults, lastArtistSearch } = this.state;
     const minSearchLenght = 2;
     return (
       <div data-testid="page-search" className="searchPage">
@@ -73,7 +75,7 @@ class Search extends React.Component {
           results.length > 0
             ? (
               <>
-                <p className="resTitle">{`Resultado de álbuns de: ${artistSearch}`}</p>
+                <p className="resTitle">{`Resultado de álbuns de: ${lastArtistSearch}`}</p>
                 <div className="results">
                   {
                     results.map((r) => (
