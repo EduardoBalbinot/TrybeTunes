@@ -26,11 +26,16 @@ class Login extends React.Component {
     this.setState({ logged: true });
   };
 
+  preventSubmit = (e) => {
+    e.preventDefault();
+    this.btnEntrarClick();
+  };
+
   render() {
     const { nome, loading, logged } = this.state;
     const minNameLenght = 3;
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" onSubmit={ this.preventSubmit }>
         <form className="loginFormTunes" autoComplete="off">
           <img src={ logo } alt="logo" className="logo" />
           <h1 className="logoTitle">Trybe Tunes.</h1>

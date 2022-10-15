@@ -34,13 +34,18 @@ class Search extends React.Component {
     });
   };
 
+  preventSubmit = (e) => {
+    e.preventDefault();
+    this.searchClick();
+  };
+
   render() {
     const { artistSearch, loading, results, noResults } = this.state;
     const minSearchLenght = 2;
     return (
       <div data-testid="page-search" className="searchPage">
         <Header />
-        <form className="searchForm" autoComplete="off">
+        <form className="searchForm" autoComplete="off" onSubmit={ this.preventSubmit }>
           {
             loading
               ? <Loading />
