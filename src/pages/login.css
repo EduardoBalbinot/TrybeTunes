@@ -3,7 +3,7 @@
   margin-top: 0;
 }
 
-.logo {
+.bigLogo {
   display: flex;
   flex-direction: column;
   font-size: 100%;
@@ -11,7 +11,7 @@
   width: 200px;
 }
 
-.logo img {
+.bigLogo img {
   margin: 20px auto 0;
   max-width: 75%;
 }

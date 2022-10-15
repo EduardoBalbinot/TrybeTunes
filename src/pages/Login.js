@@ -37,7 +37,7 @@ class Login extends React.Component {
     return (
       <div data-testid="page-login" onSubmit={ this.preventSubmit }>
         <form className="loginFormTunes" autoComplete="off">
-          <Logo />
+          <Logo clName="bigLogo" />
           <input
             id="nome"
             name="nome"

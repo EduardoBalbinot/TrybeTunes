@@ -4,24 +4,41 @@
   font-weight: 400;
 }
 
-.headerTunes img {
-  border-radius: 50%;
-  height: 100px;
+.headerContent {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
 }
 
-.headerContent h1 {
-  text-align: center;
-}
-
-.headerTunes div {
+.userInfo {
   align-items: center;
   display: flex;
+  flex-grow: 1;
+  font-size: 15px;
 }
 
 
-.headerContent {
-  justify-content: center;
-  padding: 5px;
+.smallLogo {
+  display: flex;
+  flex-direction: column;
+  font-size: 50%;
+  max-height: 100px;
+  width: 100px;
+}
+
+.smallLogo img {
+  margin: 0 auto;
+  max-height: 75%;
+}
+
+.userImage {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.headerMenu {
+  align-items: center;
+  display: flex;
 }
 
 .pageLink {
@@ -32,4 +49,23 @@
   line-height: 30px;
   text-align: center;
   text-decoration: none;
+}
+
+@media only screen and ( max-width : 1020px ) {
+
+  .headerContent {
+    padding: 0 5px;
+  }
+
+  .userInfo h1 {
+    font-size: 15px;
+  }
+
+  .userImage {
+    width: 60px;
+  }
+
+  .smallLogo {
+    max-height: 80px;
+  }
 }
