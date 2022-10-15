@@ -31,7 +31,7 @@ class Album extends React.Component {
     if (coverLink) {
       const lastCharacters = 11;
       let newLink = coverLink.substring(0, coverLink.length - lastCharacters);
-      newLink += '1024x1024bb.jpg';
+      newLink += '800x800bb.jpg';
       return newLink;
     }
   };

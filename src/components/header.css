@@ -2,6 +2,10 @@
   background-image: linear-gradient(to left, rgb(247, 38, 132), rgb(72, 12, 168));
   color: white;
   font-weight: 400;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
 .headerContent {
