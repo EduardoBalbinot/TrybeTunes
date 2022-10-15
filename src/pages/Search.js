@@ -75,7 +75,11 @@ class Search extends React.Component {
           results.length > 0
             ? (
               <>
-                <p className="resTitle">{`Resultado de álbuns de: ${lastArtistSearch}`}</p>
+                <p
+                  className="resTitle"
+                >
+                  {`Resultado de álbuns de: ${lastArtistSearch}`}
+                </p>
                 <div className="results">
                   {
                     results.map((r) => (

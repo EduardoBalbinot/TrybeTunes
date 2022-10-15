@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import logo from './logo.png';
 import Loading from '../components/Loading';
+import Logo from '../components/Logo';
 import { createUser } from '../services/userAPI';
 import './login.css';
 
@@ -37,8 +37,7 @@ class Login extends React.Component {
     return (
       <div data-testid="page-login" onSubmit={ this.preventSubmit }>
         <form className="loginFormTunes" autoComplete="off">
-          <img src={ logo } alt="logo" className="logo" />
-          <h1 className="logoTitle">Trybe Tunes.</h1>
+          <Logo />
           <input
             id="nome"
             name="nome"

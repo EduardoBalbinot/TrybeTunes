@@ -4,9 +4,16 @@
 }
 
 .logo {
+  display: flex;
+  flex-direction: column;
+  font-size: 100%;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.logo img {
   margin: 20px auto 0;
-  max-height: 150px;
-  max-width: 150px;
+  max-width: 75%;
 }
 
 .logoTitle {
