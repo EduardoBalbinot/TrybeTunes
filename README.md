@@ -19,7 +19,7 @@ TrybeTunes é um projeto front-end desenvolvido como parte do currículo do curs
 
 ## Pré-requisitos
 
-Antes de executar o projeto localmente, certifique-se de ter o Node.js instalado em sua máquina.
+Antes de executar o projeto localmente, certifique-se de ter o Node.js e o NPM instalado em sua máquina.
 
 ## Como executar o projeto
 
